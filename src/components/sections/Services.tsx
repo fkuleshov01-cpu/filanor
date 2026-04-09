@@ -185,7 +185,7 @@ const pillars = [
     label: "PILIER 01",
     title: "Applications web sur mesure",
     description:
-      "Des outils taillés pour votre métier. Pas un Wix bricolé, pas un ERP à 50'000 CHF. Du sur-mesure qui vous ressemble.",
+      "Des outils taillés pour votre métier. Pas un Wix bricolé, pas un ERP surdimensionné. Du sur-mesure qui vous ressemble.",
     cta: "Découvrir",
     mockup: DashboardMockup,
   },
@@ -392,8 +392,8 @@ export default function Services() {
               { sector: "Cabinet médical", result: "Prise de RDV + dossiers patients + rappels automatiques" },
               { sector: "PME import-export", result: "Suivi commandes + facturation + tableau de bord dirigeant" },
             ]}
-            timeline="4 à 6 semaines"
-            startingPrice="Dès 4'500 CHF"
+            timeline="À définir ensemble"
+            startingPrice="Sur devis"
           />
         )}
         {openModal === "pilier2" && (
@@ -416,8 +416,8 @@ export default function Services() {
               { sector: "Cabinet d'avocats", result: "IA qui répond aux appels en audience + tri intelligent des mails — zéro appel raté" },
               { sector: "Salon de coiffure", result: "Réservation 24/7 + rappels SMS + carte fidélité Wallet — 12h/semaine récupérées" },
             ]}
-            timeline="2 à 4 semaines"
-            startingPrice="Dès 2'500 CHF"
+            timeline="À définir ensemble"
+            startingPrice="Sur devis"
           />
         )}
         {openModal === "pilier3" && (
@@ -440,8 +440,8 @@ export default function Services() {
               { sector: "Restaurant gastronomique", result: "Carte animée + réservation + story chef en 3D" },
               { sector: "Cabinet d'architectes", result: "Portfolio interactif + visite des projets en 3D" },
             ]}
-            timeline="3 à 5 semaines"
-            startingPrice="Dès 3'500 CHF"
+            timeline="À définir ensemble"
+            startingPrice="Sur devis"
           />
         )}
       </AnimatePresence>
