@@ -45,8 +45,31 @@ export default function Contact() {
     setTimeout(() => setToast(null), 4000);
   };
 
+  const isValidEmail = (value: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const trimmedName = name.trim();
+    const trimmedEmail = email.trim();
+    const trimmedMessage = message.trim();
+
+    if (!trimmedName || !trimmedEmail || !trimmedMessage) {
+      showToast("Merci de remplir tous les champs obligatoires.");
+      return;
+    }
+
+    if (!isValidEmail(trimmedEmail)) {
+      showToast("L'adresse email ne semble pas valide.");
+      return;
+    }
+
+    setName(trimmedName);
+    setEmail(trimmedEmail);
+    setPhone(phone.trim());
+    setMessage(trimmedMessage);
+
     setStatus("sending");
     setTimeout(() => {
       setStatus("sent");
@@ -213,6 +236,7 @@ export default function Contact() {
                             placeholder=" "
                             className={inputClass}
                             required
+                            maxLength={100}
                           />
                           <label
                             htmlFor="contact-name"
@@ -232,6 +256,7 @@ export default function Contact() {
                             placeholder=" "
                             className={inputClass}
                             required
+                            maxLength={254}
                           />
                           <label
                             htmlFor="contact-email"
@@ -251,6 +276,7 @@ export default function Contact() {
                           onChange={(e) => setPhone(e.target.value)}
                           placeholder=" "
                           className={inputClass}
+                          maxLength={20}
                         />
                         <label
                           htmlFor="contact-phone"
@@ -269,6 +295,7 @@ export default function Contact() {
                           placeholder=" "
                           className={`${inputClass} resize-none`}
                           required
+                          maxLength={2000}
                         />
                         <label
                           htmlFor="contact-message"
