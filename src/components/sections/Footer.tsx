@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { FilanorLogo } from "@/components/brand/FilanorLogo";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 function LinkedinIcon({ size = 18 }: { size?: number }) {
@@ -65,19 +65,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
           {/* Colonne 1 — Logo + tagline + réseaux (4/12) */}
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-3">
-              <Image
-                src="/logo.png"
-                alt="Filanor Tech"
-                width={44}
-                height={44}
-                className="rounded-lg"
-              />
-              <div>
-                <div className="text-xl font-bold text-white">Filanor</div>
-                <div className="text-xs text-[var(--accent-secondary)] font-medium">Tech SNC</div>
-              </div>
-            </div>
+            <FilanorLogo showWordmark variant="light" className="h-10 w-auto" aria-hidden="true" />
             <p className="mt-5 text-sm text-white/60 leading-relaxed max-w-xs">
               On construit des applications web sur mesure et des
               automatisations intelligentes pour les PME suisses qui veulent

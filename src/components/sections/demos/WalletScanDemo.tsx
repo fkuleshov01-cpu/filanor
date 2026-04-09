@@ -2,7 +2,7 @@
 
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
+import { FilanorLogo } from '@/components/brand/FilanorLogo'
 
 const TOTAL = 10
 const INITIAL_COUNT = 7
@@ -32,19 +32,10 @@ function LockScreen({ step }: { step: number }) {
         aria-hidden="true"
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
       >
-        <div
-          className="relative w-[200px] h-[200px] opacity-[0.18]"
+        <FilanorLogo
+          className="w-[200px] h-[200px] opacity-[0.18]"
           style={{ filter: 'drop-shadow(0 0 30px rgba(20, 184, 166, 0.4))' }}
-        >
-          <Image
-            src="/filanor-logo.png"
-            alt=""
-            fill
-            sizes="200px"
-            className="object-contain"
-            priority={false}
-          />
-        </div>
+        />
       </div>
       {/* Glow teal subtil derrière le F */}
       <div

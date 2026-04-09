@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import { FilanorLogo } from "@/components/brand/FilanorLogo";
 import {
   motion,
   AnimatePresence,
@@ -103,14 +103,7 @@ export const FloatingNav = ({
             className="flex items-center gap-2 rounded-full p-2 transition-colors hover:bg-[var(--accent-light)]"
             aria-label="Retour en haut"
           >
-            <Image
-              src="/logo.png"
-              alt="Filanor Tech"
-              width={28}
-              height={28}
-              className="rounded-md"
-              priority
-            />
+            <FilanorLogo className="h-6 w-6" aria-hidden="true" />
             <span className="hidden sm:block font-bold text-[var(--text-primary)]">
               Filanor
             </span>
