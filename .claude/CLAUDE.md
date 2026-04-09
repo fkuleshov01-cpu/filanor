@@ -3,27 +3,27 @@
 ## Qui je suis
 Filip Kuleshov, 20 ans, Lausanne (Suisse). Agence tech avec Daniel Shevchenko. Applications web sur mesure + automatisations intelligentes pour PME suisses.
 
-## Skills disponibles (8 skills)
+## Skills disponibles (6 skills + impeccable)
 
 **OBLIGATOIRE** : Avant tout travail, lis les skills pertinents dans `.claude/skills/` :
 
 ### Design & Esthétique
-- `.claude/skills/frontend-design/SKILL.md` — **Light mode, palette Émeraude Tech, style Stripe, Plus Jakarta Sans.** Lis AVANT tout composant visuel.
-- `.claude/skills/ui-ux-expert/SKILL.md` — Design tokens, espacement, accessibilité WCAG, responsive, conversion.
+- `.claude/skills/frontend-design/SKILL.md` — Base design frontend. Lis AVANT tout composant visuel.
+- `.claude/skills/emil-design-eng/SKILL.md` — **Philosophie Linear : animations invisibles, micro-interactions 150-250ms, ease-out, pas de gadget.** Lis AVANT toute animation ou micro-interaction.
 
 ### Ton & Contenu
 - `.claude/skills/tone-and-copy/SKILL.md` — **Ton provocateur + accessible, vouvoiement, langage sans jargon.** Lis AVANT de rédiger tout texte sur le site.
-
-### Animation & 3D
-- `.claude/skills/gsap-react/SKILL.md` — GSAP dans React/Next.js : useGSAP, ScrollTrigger. Lis AVANT toute animation.
 
 ### Framework
 - `.claude/skills/nextjs-patterns/SKILL.md` — Next.js 15 App Router : hydration errors, "use client", Plus Jakarta Sans. Lis AVANT de toucher à layout/page/SSR.
 
 ### Qualité & Debug
 - `.claude/skills/systematic-debugging/SKILL.md` — Méthodologie de debug. Lis QUAND un bug apparaît.
-- `.claude/skills/interactive-ux/SKILL.md` — Tout clickable, hover states, navigation. Lis QUAND des éléments ne sont pas interactifs.
 - `.claude/skills/web-performance/SKILL.md` — GPU animations, lazy loading, 3D performance. Lis QUAND le site est lent.
+
+### Impeccable (pbakaus) — vocabulaire design + 20 slash commands
+Commandes clés : `/polish`, `/audit`, `/typeset`, `/arrange`, `/distill`
+Tous les skills impeccable sont dans `.claude/skills/` (adapt, animate, arrange, audit, bolder, clarify, colorize, critique, delight, distill, extract, harden, normalize, onboard, optimize, overdrive, polish, quieter, teach-impeccable, typeset).
 
 ## Règles absolues du site
 

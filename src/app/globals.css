@@ -1,26 +1,286 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Palette Émeraude Tech — Backgrounds */
+  --bg-primary: #fafdf7;
+  --bg-secondary: #f0f7f4;
+  --bg-elevated: #ffffff;
+  --dark-panel: #0f1c1a;
+
+  /* Texte */
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+
+  /* Accent teal */
+  --accent-primary: #0d9488;
+  --accent-secondary: #14b8a6;
+  --accent-pale: #5eead4;
+  --accent-hover: #0f766e;
+
+  /* Bordures */
+  --border-light: #e5e7eb;
+  --accent-border: rgba(13, 148, 136, 0.15);
+
+  /* Variantes alpha — accent-primary */
+  --accent-light: rgba(13, 148, 136, 0.08);
+  --accent-primary-06: rgba(13, 148, 136, 0.06);
+  --accent-primary-10: rgba(13, 148, 136, 0.1);
+  --accent-primary-15: rgba(13, 148, 136, 0.15);
+  --accent-primary-20: rgba(13, 148, 136, 0.2);
+  --accent-primary-30: rgba(13, 148, 136, 0.3);
+
+  /* Variantes alpha — accent-secondary */
+  --accent-secondary-10: rgba(20, 184, 166, 0.1);
+  --accent-secondary-20: rgba(20, 184, 166, 0.2);
+  --accent-secondary-30: rgba(20, 184, 166, 0.3);
+}
+
+button:not(:disabled),
+a,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+summary,
+label[for],
+select {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-sans);
+  --font-caveat: var(--font-caveat), cursive;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Keyframes Aceternity */
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+.animate-spotlight {
+  animation: spotlight 2s ease 0.75s 1 forwards;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+}
+
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  filter: blur(6px);
+}
+
+/* Gradient mesh vivant qui bouge lentement */
+@keyframes mesh-drift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(3%, -2%) scale(1.05);
+  }
+  66% {
+    transform: translate(-2%, 3%) scale(0.98);
+  }
+}
+
+.animate-mesh {
+  animation: mesh-drift 18s ease-in-out infinite;
+}
+
+
+
+/* Particules flottantes pour le panneau Contact sombre */
+@keyframes particle-float {
+  0% {
+    transform: translateY(100%) translateX(0) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(90%) translateX(0) scale(1);
+  }
+  50% {
+    transform: translateY(50%) translateX(20px) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(10%) translateX(-15px) scale(1);
+  }
+  100% {
+    transform: translateY(-10%) translateX(0) scale(0);
+    opacity: 0;
+  }
+}
+
+.particle {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(94, 234, 212, 0.9), rgba(20, 184, 166, 0.3));
+  box-shadow: 0 0 12px rgba(20, 184, 166, 0.6);
+  pointer-events: none;
+  animation: particle-float linear infinite;
+}
+
+
+/* Flux animé pour le flow d'automatisation (Services) */
+@keyframes flow-dash {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -12; }
+}
+.animate-flow-dash {
+  animation: flow-dash 1.5s linear infinite;
+}
+
+/* Orbes flottantes pour le mockup site vitrine (Services) */
+@keyframes float-slow {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-4px, -6px); }
+}
+@keyframes float-slower {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(5px, -4px); }
+}
+.animate-float-slow { animation: float-slow 4s ease-in-out infinite; }
+.animate-float-slower { animation: float-slower 5s ease-in-out infinite; }
+
+/* Cards Secteurs */
+.sector-card:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 4px;
+  border-radius: 1rem;
+}
+
+/* Indicateur de scroll Hero */
+@keyframes scroll-hint {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+.animate-scroll-hint {
+  animation: scroll-hint 2.2s ease-in-out infinite;
+}
+
+/* Scrollbar fine teal pour les conteneurs démo */
+.scrollbar-thin-teal {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-primary-20) transparent;
+}
+.scrollbar-thin-teal::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin-teal::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin-teal::-webkit-scrollbar-thumb {
+  background-color: var(--accent-primary-20);
+  border-radius: 3px;
+}
+.scrollbar-thin-teal::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-primary);
+}
+
+/* Shimmer teal sur les phrases Caveat */
+@layer utilities {
+  .text-shimmer-teal {
+    background: linear-gradient(
+      90deg,
+      var(--accent-primary) 0%,
+      var(--accent-primary) 35%,
+      var(--accent-pale) 50%,
+      var(--accent-primary) 65%,
+      var(--accent-primary) 100%
+    );
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    /* Padding interne pour éviter le clip des glyphes Caveat */
+    display: inline-block;
+    padding: 0.15em 0.25em 0.25em 0.25em;
+    margin: -0.15em -0.25em -0.25em -0.25em;
+    line-height: 1.15;
+
+    animation: shimmer-sweep 4.5s linear infinite;
+    will-change: background-position;
+  }
+
+  @keyframes shimmer-sweep {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .text-shimmer-teal {
+    animation: none;
+    background: none;
+    -webkit-text-fill-color: var(--accent-primary);
+    color: var(--accent-primary);
+  }
 }
