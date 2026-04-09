@@ -49,5 +49,5 @@ next-env.d.ts
 # OS
 desktop.ini
 
-# claude
-.claude/memory/archive/
+# Dossier de travail Claude Code (privé, non versionné)
+.claude/
