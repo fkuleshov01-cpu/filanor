@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Caveat } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
 import ScrollProgress from "@/components/ui/scroll-progress";
@@ -17,6 +17,14 @@ const caveat = Caveat({
   variable: "--font-caveat",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover",
+  themeColor: "#FAFDF7",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://filanor.ch"),

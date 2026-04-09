@@ -7,6 +7,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
+import { Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type NavItem = {
@@ -90,7 +91,7 @@ export const FloatingNav = ({
         transition={{ duration: 0.2 }}
         aria-label="Navigation principale"
         className={cn(
-          "flex max-w-fit fixed top-6 inset-x-0 mx-auto z-40 items-center justify-center",
+          "flex max-w-fit fixed top-[max(1.5rem,calc(env(safe-area-inset-top)+0.5rem))] inset-x-0 mx-auto z-40 items-center justify-center",
           className
         )}
       >
@@ -164,9 +165,11 @@ export const FloatingNav = ({
               const el = document.getElementById(ctaTargetId);
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }}
-            className="relative rounded-full bg-[var(--accent-primary)] px-4 py-2 text-sm font-medium text-white transition-all hover:bg-[var(--accent-hover)] hover:shadow-lg hover:shadow-[var(--accent-primary-30)]"
+            className="relative flex items-center justify-center gap-2 rounded-full bg-[var(--accent-primary)] px-3 sm:px-4 py-2 text-sm font-medium text-white transition-all hover:bg-[var(--accent-hover)] hover:shadow-lg hover:shadow-[var(--accent-primary-30)]"
+            aria-label="Nous contacter"
           >
-            <span>{ctaLabel}</span>
+            <Mail className="h-4 w-4 sm:hidden" aria-hidden="true" />
+            <span className="hidden sm:inline">{ctaLabel}</span>
           </button>
         </div>
       </motion.nav>
