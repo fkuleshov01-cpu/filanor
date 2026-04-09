@@ -1361,7 +1361,7 @@ export default function ChaosToClarityDemo() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        Votre bordel actuel, en une interface propre.
+        Votre bazar actuel, en une interface propre.
       </motion.p>
 
       <div
