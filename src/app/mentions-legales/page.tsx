@@ -45,10 +45,10 @@ const sections = [
           <p className="text-sm">
             <span className="text-[#4B5563]">Email :</span>{" "}
             <a
-              href="mailto:hello@filanor.ch"
+              href="mailto:contact@filanor.ch"
               className="text-[#0D9488] font-medium hover:underline"
             >
-              hello@filanor.ch
+              contact@filanor.ch
             </a>
           </p>
           <p className="text-sm">
@@ -77,10 +77,10 @@ const sections = [
         Pour toute question relative au contenu publié, vous pouvez nous écrire
         à{" "}
         <a
-          href="mailto:hello@filanor.ch"
+          href="mailto:contact@filanor.ch"
           className="text-[#0D9488] font-medium hover:underline"
         >
-          hello@filanor.ch
+          contact@filanor.ch
         </a>
         .
       </p>
@@ -191,10 +191,10 @@ const sections = [
           concernant vos données personnelles. Pour exercer ces droits,
           envoyez-nous simplement un email à{" "}
           <a
-            href="mailto:hello@filanor.ch"
+            href="mailto:contact@filanor.ch"
             className="text-[#0D9488] font-medium hover:underline"
           >
-            hello@filanor.ch
+            contact@filanor.ch
           </a>
           . Nous vous répondrons dans un délai maximal de 30 jours.
         </p>
@@ -297,10 +297,10 @@ const sections = [
           <p className="text-sm">
             <span className="font-semibold text-[#111827]">Email :</span>{" "}
             <a
-              href="mailto:hello@filanor.ch"
+              href="mailto:contact@filanor.ch"
               className="text-[#0D9488] font-medium hover:underline"
             >
-              hello@filanor.ch
+              contact@filanor.ch
             </a>
           </p>
           <p className="text-sm mt-1">
@@ -388,11 +388,11 @@ export default function MentionsLegalesPage() {
               Une question sur ces mentions légales ?
             </p>
             <a
-              href="mailto:hello@filanor.ch"
+              href="mailto:contact@filanor.ch"
               className="inline-flex items-center gap-2 mt-3 text-[#14B8A6] font-semibold hover:text-[#5EEAD4] transition-colors"
             >
               <Mail size={16} />
-              hello@filanor.ch
+              contact@filanor.ch
             </a>
           </div>
         </div>

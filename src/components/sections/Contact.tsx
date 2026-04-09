@@ -9,6 +9,7 @@ import {
   Clock,
   Mail,
   MapPin,
+  Phone,
   MessageSquare,
   Sparkles,
 } from "lucide-react";
@@ -81,9 +82,6 @@ export default function Contact() {
     }, 1200);
   };
 
-  const handleCalendly = () => {
-    showToast("Calendly arrive bientôt ! On vous tiendra au courant.");
-  };
 
   return (
     <section
@@ -360,10 +358,11 @@ export default function Contact() {
                     transition={{ duration: 0.5, ease: smoothEase, delay: 0 }}
                     viewport={{ once: true }}
                   >
-                    <button
-                      type="button"
-                      onClick={handleCalendly}
-                      className="w-full text-left p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/[0.08] hover:border-[var(--accent-secondary-30)] hover:-translate-y-0.5 transition-all duration-300"
+                    <a
+                      href="https://calendly.com/contact-filanor/appel-decouverte"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full text-left p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/[0.08] hover:border-[var(--accent-secondary-30)] hover:-translate-y-0.5 transition-all duration-300"
                     >
                       <div className="flex items-start gap-4">
                         <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[var(--accent-secondary)] to-[var(--accent-primary)] flex items-center justify-center shadow-md shadow-[rgba(20,184,166,0.4)] flex-shrink-0">
@@ -382,7 +381,7 @@ export default function Contact() {
                           </div>
                         </div>
                       </div>
-                    </button>
+                    </a>
                   </motion.div>
 
                   {/* Email */}
@@ -394,7 +393,7 @@ export default function Contact() {
                     viewport={{ once: true }}
                   >
                     <a
-                      href="mailto:hello@filanor.ch"
+                      href="mailto:contact@filanor.ch"
                       className="block p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/[0.08] hover:border-[var(--accent-secondary-30)] hover:-translate-y-0.5 transition-all duration-300 group"
                     >
                       <div className="flex items-start gap-4">
@@ -406,11 +405,47 @@ export default function Contact() {
                             Écrivez-nous
                           </div>
                           <div className="text-xs text-[var(--accent-secondary)] font-medium mt-0.5 truncate">
-                            hello@filanor.ch
+                            contact@filanor.ch
                           </div>
                         </div>
                       </div>
                     </a>
+                  </motion.div>
+
+                  {/* Téléphone */}
+                  <motion.div
+                    className="contact-side"
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, ease: smoothEase, delay: 0.18 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
+                      <div className="flex items-start gap-4">
+                        <div className="w-11 h-11 rounded-xl bg-[rgba(20,184,166,0.12)] border border-[var(--accent-secondary-20)] flex items-center justify-center flex-shrink-0">
+                          <Phone className="text-[var(--accent-secondary)]" size={20} />
+                        </div>
+                        <div className="min-w-0">
+                          <div className="text-sm font-bold text-white">
+                            Téléphone
+                          </div>
+                          <div className="space-y-1 mt-1">
+                            <a
+                              href="tel:+41763756445"
+                              className="block text-xs text-[var(--accent-secondary)] font-medium hover:text-[var(--accent-pale)] transition-colors"
+                            >
+                              +41 76 375 64 45
+                            </a>
+                            <a
+                              href="tel:+41788127369"
+                              className="block text-xs text-[var(--accent-secondary)] font-medium hover:text-[var(--accent-pale)] transition-colors"
+                            >
+                              +41 78 812 73 69
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </motion.div>
 
                   {/* Lieu */}

@@ -100,7 +100,7 @@ export default function Footer() {
                 <InstagramIcon size={18} />
               </span>
               <a
-                href="mailto:hello@filanor.ch"
+                href="mailto:contact@filanor.ch"
                 aria-label="Email"
                 className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:bg-[var(--accent-secondary-10)] hover:border-[var(--accent-secondary-30)] hover:text-[var(--accent-secondary)] transition-all duration-300"
               >
@@ -154,14 +154,14 @@ export default function Footer() {
             <ul className="mt-5 space-y-3">
               <li>
                 <a
-                  href="mailto:hello@filanor.ch"
+                  href="mailto:contact@filanor.ch"
                   className="flex items-start gap-2 text-sm text-white/70 hover:text-[var(--accent-secondary)] transition-colors duration-200 group"
                 >
                   <Mail
                     size={14}
                     className="mt-0.5 text-[var(--accent-secondary)] flex-shrink-0"
                   />
-                  <span className="break-all">hello@filanor.ch</span>
+                  <span className="break-all">contact@filanor.ch</span>
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm text-white/70">
