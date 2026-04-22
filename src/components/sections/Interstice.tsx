@@ -85,7 +85,7 @@ export default function Interstice() {
 
         {/* Sous-texte discret */}
         <p className="mt-10 md:mt-16 text-sm md:text-base text-[var(--text-muted)] max-w-md mx-auto leading-relaxed">
-          Trois démos interactives. Touchez, cliquez, testez. On vous laisse
+          Quatre démos interactives. Touchez, cliquez, testez. On vous laisse
           juger.
         </p>
       </motion.div>

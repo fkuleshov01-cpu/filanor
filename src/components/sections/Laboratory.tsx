@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import NightAutomationDemo from "./demos/NightAutomationDemo";
 import ChaosToClarityDemo from "./demos/ChaosToClarityDemo";
 import WalletScanDemo from "./demos/WalletScanDemo";
+import VoiceAgentDemo from "./demos/VoiceAgentDemo";
 
 export default function Laboratory() {
   return (
@@ -56,6 +57,25 @@ export default function Laboratory() {
 
       {/* DÉMO 3 — Wallet Scan */}
       <WalletScanDemo />
+
+      {/* Transition vers démo 4 */}
+      <div className="max-w-3xl mx-auto px-6 text-center py-20 md:py-28">
+        <motion.p
+          className="text-xl md:text-2xl text-[var(--text-secondary)] font-medium leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          Maintenant, imaginez{' '}
+          <span className="text-[var(--accent-primary)] font-semibold">
+            ce qui se passe pendant que vous dormez.
+          </span>
+        </motion.p>
+      </div>
+
+      {/* DÉMO 4 — Agent vocal hôtel */}
+      <VoiceAgentDemo />
     </section>
   );
 }
