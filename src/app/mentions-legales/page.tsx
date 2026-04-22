@@ -25,10 +25,6 @@ const sections = [
           <p>
             <span className="font-semibold text-[#111827]">
               Filanor Tech SNC
-            </span>{" "}
-            <span className="text-[#9CA3AF] text-sm">
-              (en cours d&apos;inscription au Registre du Commerce du canton de
-              Vaud)
             </span>
           </p>
           <p className="text-sm">
@@ -40,7 +36,10 @@ const sections = [
             et Daniel Shevchenko
           </p>
           <p className="text-sm">
-            <span className="text-[#4B5563]">Siège :</span> Lausanne, Suisse
+            <span className="text-[#4B5563]">Siège :</span> Chavornay
+          </p>
+          <p className="text-sm">
+            <span className="text-[#4B5563]">Adresse :</span> Rue de Crause 3, 1373 Chavornay, Suisse
           </p>
           <p className="text-sm">
             <span className="text-[#4B5563]">Email :</span>{" "}
@@ -52,16 +51,17 @@ const sections = [
             </a>
           </p>
           <p className="text-sm">
-            <span className="text-[#4B5563]">Numéro IDE / CHE :</span>{" "}
-            <span className="italic text-[#9CA3AF]">
-              attribué prochainement (inscription en cours)
-            </span>
+            <span className="text-[#4B5563]">Numéro IDE :</span>{" "}
+            CHE-142.367.808
+          </p>
+          <p className="text-sm">
+            <span className="text-[#4B5563]">N° Registre du Commerce :</span>{" "}
+            CH-550-1256436-1
           </p>
         </div>
         <p className="mt-4 text-sm">
-          Filanor Tech SNC est une jeune entreprise fondée en 2026. Les
-          informations relatives au Registre du Commerce seront mises à jour
-          dès l&apos;inscription officielle.
+          Filanor Tech SNC est inscrite au Registre du Commerce du canton de
+          Vaud.
         </p>
       </>
     ),
@@ -305,7 +305,7 @@ const sections = [
           </p>
           <p className="text-sm mt-1">
             <span className="font-semibold text-[#111827]">Adresse :</span>{" "}
-            Lausanne, Suisse
+            Rue de Crause 3, 1373 Chavornay, Suisse
           </p>
         </div>
       </>
@@ -351,7 +351,7 @@ export default function MentionsLegalesPage() {
             de notre mieux pour rester clair.
           </p>
           <p className="mt-3 text-sm text-[#9CA3AF]">
-            Dernière mise à jour : 7 avril 2026
+            Dernière mise à jour : 22 avril 2026
           </p>
         </div>
       </section>
