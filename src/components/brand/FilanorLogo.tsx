@@ -61,7 +61,7 @@ export function FilanorLogo({
 
   return (
     <svg
-      viewBox="0 0 380 100"
+      viewBox="0 0 480 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Filanor Tech"
@@ -105,7 +105,7 @@ export function FilanorLogo({
         FILANOR
       </text>
       <text
-        x="290"
+        x="320"
         y="64"
         fontFamily="'Plus Jakarta Sans', system-ui, sans-serif"
         fontSize="42"
