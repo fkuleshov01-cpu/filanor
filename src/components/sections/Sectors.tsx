@@ -23,6 +23,7 @@ interface Sector {
 }
 
 const sectors: Sector[] = [
+  // --- SECTEURS ACTIFS ---
   {
     id: "coiffure",
     label: "Salons de coiffure",
@@ -83,6 +84,9 @@ const sectors: Sector[] = [
         "+0,8 étoile Google \u00b7 \u221245% de charge réception \u00b7 18h/semaine",
     },
   },
+
+  // --- SECTEURS DÉSACTIVÉS (à réactiver si besoin) ---
+  /*
   {
     id: "flotte",
     label: "Flottes de livraison",
@@ -183,6 +187,7 @@ const sectors: Sector[] = [
         "+50% d\u2019abonnements récurrents \u00b7 \u221280% d\u2019impayés \u00b7 10h/semaine",
     },
   },
+  */
 ];
 
 export default function Sectors() {
@@ -245,8 +250,8 @@ export default function Sectors() {
           pour vous.
         </motion.p>
 
-        {/* Grille cards — 4x2 desktop, 2x4 tablette, 1x8 mobile */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {/* Grille cards — 3 desktop, 2 tablette, 1 mobile */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {sectors.map((sector, index) => {
             const isTapped = tappedIndex === index;
             const defaultVariant = reducedMotion ? "hover" : "rest";
@@ -293,7 +298,7 @@ export default function Sectors() {
                     src={sector.url}
                     alt={sector.label}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover"
                   />
                 </motion.div>
@@ -461,6 +466,13 @@ export default function Sectors() {
             );
           })}
         </div>
+
+        {/* Texte généraliste */}
+        <p className="text-center text-[var(--text-secondary)] text-lg mt-12 max-w-2xl mx-auto">
+          On travaille aussi avec : cabinets d&apos;avocats, dentistes, coachs
+          sportifs, agences immobilières, flottes de livraison — et tout métier
+          de service qui perd du temps sur des tâches répétitives.
+        </p>
       </div>
 
       {/* Modal exemple secteur */}
