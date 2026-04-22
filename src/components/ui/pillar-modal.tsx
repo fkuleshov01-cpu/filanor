@@ -80,7 +80,7 @@ export default function PillarModal({
       onClick={onClose}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/80" />
 
       {/* Panneau */}
       <motion.div

@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import NightAutomationDemo from "./demos/NightAutomationDemo";
-import ChaosToClarityDemo from "./demos/ChaosToClarityDemo";
-import WalletScanDemo from "./demos/WalletScanDemo";
-import VoiceAgentDemo from "./demos/VoiceAgentDemo";
+import dynamic from "next/dynamic";
+
+const NightAutomationDemo = dynamic(() => import("./demos/NightAutomationDemo"), { ssr: false });
+const ChaosToClarityDemo = dynamic(() => import("./demos/ChaosToClarityDemo"), { ssr: false });
+const WalletScanDemo = dynamic(() => import("./demos/WalletScanDemo"), { ssr: false });
+const VoiceAgentDemo = dynamic(() => import("./demos/VoiceAgentDemo"), { ssr: false });
 
 export default function Laboratory() {
   return (

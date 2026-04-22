@@ -95,7 +95,7 @@ export const FloatingNav = ({
           className
         )}
       >
-        <div className="flex items-center justify-center gap-2 rounded-full border border-gray-200/60 bg-[var(--bg-primary)]/85 px-2 py-1.5 shadow-lg shadow-black/5 backdrop-blur-md">
+        <div className="flex items-center justify-center gap-2 rounded-full border border-gray-200/60 bg-[var(--bg-primary)]/85 px-2 py-1.5 shadow-lg shadow-black/5 backdrop-blur-md will-change-transform">
           {/* Logo — clickable pour scroll top */}
           <button
             type="button"

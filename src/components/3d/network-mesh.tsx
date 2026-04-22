@@ -103,8 +103,8 @@ export default function NetworkMesh() {
     setIsMobile(window.innerWidth < 768);
   }, []);
 
-  const pointCount = isMobile ? 70 : 120;
-  const pulseCount = isMobile ? 6 : 12;
+  const pointCount = isMobile ? 50 : 80;
+  const pulseCount = isMobile ? 4 : 8;
 
   // Positions de base, connexions et voisins — calculés une seule fois
   const { basePoints, connections, neighbors } = useMemo(() => {
@@ -180,8 +180,8 @@ export default function NetworkMesh() {
 
   // État initial des pulses — répartis et décalés
   const pulsesRef = useRef<PulseState[]>(
-    Array.from({ length: 12 }, (_, i) => {
-      const startIdx = Math.floor((i * pointCount) / 12);
+    Array.from({ length: 8 }, (_, i) => {
+      const startIdx = Math.floor((i * pointCount) / 8);
       const nbrs = neighbors.get(startIdx) ?? [];
       const targetIdx = nbrs.length > 0 ? nbrs[0] : (startIdx + 1) % pointCount;
       return {

@@ -129,7 +129,7 @@ export default function NightAutomationDemo() {
           {/* Écran éteint → notification */}
           <div className="flex-1 flex items-end">
             <motion.div
-              className="w-full bg-white/10 backdrop-blur rounded-xl p-3"
+              className="w-full bg-white/15 rounded-xl p-3"
               initial={{ opacity: 0, y: 10 }}
               animate={{
                 opacity: phoneOn ? 1 : 0,

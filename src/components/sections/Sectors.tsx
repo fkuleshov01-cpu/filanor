@@ -259,7 +259,7 @@ export default function Sectors() {
             return (
               <motion.div
                 key={sector.id}
-                className="sector-card group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer"
+                className="sector-card group relative aspect-[3/4] rounded-2xl overflow-hidden cursor-pointer will-change-transform"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
@@ -411,7 +411,7 @@ export default function Sectors() {
                     </motion.div>
 
                     <motion.button
-                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-colors duration-200"
+                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-white/20 border border-white/20 hover:bg-white/30 transition-colors duration-200"
                       variants={{
                         rest: { opacity: 0, y: 5 },
                         hover: { opacity: 1, y: 0 },
@@ -450,7 +450,7 @@ export default function Sectors() {
                 {/* Indicateur "Survoler" — disparaît au hover */}
                 <motion.div
                   aria-hidden="true"
-                  className="absolute top-4 right-4 z-30 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20"
+                  className="absolute top-4 right-4 z-30 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 border border-white/20"
                   variants={{
                     rest: { opacity: 0.7 },
                     hover: { opacity: 0 },

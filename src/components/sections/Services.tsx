@@ -290,7 +290,7 @@ export default function Services() {
             return (
               <motion.div
                 key={pillar.key}
-                className="relative rounded-2xl p-6 md:p-8 bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-300 hover:border-[var(--accent-primary-30)] hover:-translate-y-1"
+                className="relative rounded-2xl p-6 md:p-8 bg-white/10 border border-white/10 transition-all duration-300 hover:border-[var(--accent-primary-30)] hover:-translate-y-1"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease, delay: idx * 0.12 }}
