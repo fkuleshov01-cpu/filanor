@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Caveat } from "next/font/google";
-import SmoothScroll from "@/components/SmoothScroll";
-import ScrollProgress from "@/components/ui/scroll-progress";
-import ScrollToTop from "@/components/ui/scroll-to-top";
+import GlobalChrome from "@/components/GlobalChrome";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -94,9 +92,7 @@ export default function RootLayout({
         >
           Aller au contenu principal
         </a>
-        <SmoothScroll />
-        <ScrollProgress />
-        <ScrollToTop />
+        <GlobalChrome />
         {children}
       </body>
     </html>

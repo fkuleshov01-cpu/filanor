@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/test-globe"],
+        disallow: ["/api/", "/test-globe", "/justine-light", "/justine-full"],
       },
     ],
     sitemap: "https://filanor.ch/sitemap.xml",
