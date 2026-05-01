@@ -429,18 +429,12 @@ export default function Contact() {
                           <div className="text-sm font-bold text-white">
                             Téléphone
                           </div>
-                          <div className="space-y-1 mt-1">
+                          <div className="mt-1">
                             <a
-                              href="tel:+41763756445"
+                              href="tel:+41215050058"
                               className="block text-xs text-[var(--accent-secondary)] font-medium hover:text-[var(--accent-pale)] transition-colors"
                             >
-                              +41 76 375 64 45
-                            </a>
-                            <a
-                              href="tel:+41788127369"
-                              className="block text-xs text-[var(--accent-secondary)] font-medium hover:text-[var(--accent-pale)] transition-colors"
-                            >
-                              +41 78 812 73 69
+                              +41 21 505 00 58
                             </a>
                           </div>
                         </div>
