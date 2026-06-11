@@ -68,7 +68,7 @@ export default function VideoLandingPage() {
             style={{ backgroundColor: '#111827' }}
           >
             <video
-              src="/v/video_pub.mp4"
+              src="/v/video_pub_h264.mp4"
               controls
               playsInline
               preload="metadata"
